@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
+    <title>Weather App</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" id="home-nav" href="#">Home</a>
+              <a class="nav-link" id="cities-nav" href="#">Cities</a>
+              <a class="nav-link" id="news-nav" href="#">News</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link section" id="home" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link section" id="cities" href="#">Cities</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link section" id="news" href="#">News</a>
+                </li>
+            </div>
+          </nav>
+        </div>
+            <img src="Rectangle 1.png" class="top-section img-fluid"/>
+
+        <div class="right-block">
+            <div class="weather-details text-center section">Weather Details</div>
+        </div>
+    </section>  -->
+    <section class="wrapper">
+        <div class="container-fluid">
+            <img class="header-image" src="Rectangle 1.png" alt="image" style="width:100%;">
+            
+            <div class="right-block">
+                <span class="weather-details section">Weather Details</span>
+                <div class="weather-data-wrapper">
+                    <div class="row section">
+                        <div class="col des_media">Description</div>
+                        <div class="col value" id="cloudy">Smoke</div>
+                    </div>
+                    <div class="row section">
+                        <div class="col humid_media">Humidity</div>
+                        <div class="col value" id="humidity">62%</div>
+                    </div>
+                    <div class="row section">
+                        <div class="col wind_media">Wind</div>
+                        <div class="col value" id="wind">8km/h</div>
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="temperature section" id ="temperature">
+                        34&#176;
+                    </div>
+                </div>
+                <div class="col-12 section">
+                    <div class="city" id="city">Mumbai</div>
+                </div>
+                <div class="col-12 section">
+                    <div class="date" id="date"> 
+                        06:45 Thursday 09/03/23
+                    </div>
+                </div>
+                
+                
+            </div>            
+        </div> 
+    </section>
+
+    <section class="wrapper">
+        <div class="mt-5 cities-list text-center">
+            Cities
+        </div>
+        
+        <div class="container">
+        <div class="row justify-content-between mt-5">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-12 card mb-3">
+            <img src="Rectangle 7.png" class="rounded card-img-top" alt="thunder">
+            <div class="card-body">
+              <div class="row">
+                <div class="card-text col-sm-6 col-md-6 col-lg-6 col-12 mb-3 temp">
+                    24&#176;
+                </div>
+                <div class="card-text col-sm-6 col-md-6 col-lg-6 col-12 mb-3">
+                    <ul>
+                        <li id="city_name">Delhi</li>
+                        <li id="date">9/03/23</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-12 col-md-4 col-lg-4 col-12 card mb-3">
+            <img src="Rectangle 9.png" class="card-img-top" alt="thunder">
+            <div class="card-body">
+              <div class="row">
+                <div class="card-text col-sm-6 col-md-6 col-lg-6 col-12 mb-3 temp">
+                    29&#176;
+                </div>
+                <div class="card-text col-sm-6 col-md-6 col-lg-6 col-12 mb-3">
+                    <ul>
+                        <li id="city_name">Chennai</li>
+                        <li id="date">9/03/23</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4 col-12 card mb-3">
+            <img src="Rectangle 11.png" class="card-img-top" alt="thunder">
+            <div class="card-body">
+              <div class="row">
+                <div class="card-text col-sm-6 col-md-6 col-lg-6 col-12 mb-3 temp">
+                    40&#176;
+                </div>
+                <div class="card-text col-sm-6 col-md-6 col-lg-6 col-12 mb-3">
+                    <ul>
+                        <li id="city_name">Jaipur</li>
+                        <li id="date">9/03/23</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="input-group rounded search-location">
+                <input type="search" class="form-control rounded input" id="input-box" name="city" placeholder="Search City" aria-label="Search" aria-describedby="search-addon" />
+                
+                <span class="input-group-text border-0" id="search-addon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper background-holder">
+        <img src="image 1.png" class="global img-fluid mx-auto" alt="...">
+    </section>
+
+    <section class="wrapper">
+        <div class="cities-list text-center mt-5">
+            News
+        </div>
+          <div class="container">
+            <div class="row justify-content-between mt-5 mb-5">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-12 card mb-3" id="images">                              
+                <div class="card-body">                    
+                    <h4 class="card-text section margin-text">Thunder Strikes Delhi</h4>        
+                </div>
+              </div>
+              
+              <div class="col-sm-12 col-md-4 col-lg-4 col-12 card mb-3" id="images2">                              
+                <div class="card-body">                    
+                    <h4 class="card-text section margin-text">Cloudstorms in Manipur</h4>        
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-4 col-lg-4 col-12 card mb-3" id="images3">                              
+                <div class="card-body">                    
+                    <h4 class="card-text section margin-text">It's Summer Season in Mumbai</h4>        
+                </div>
+              </div>
+            </div>
+            </div>    
+    </section>
+
+    <section class="wrapper footer">
+        <footer class="container p-4 rounded">
+            <div class="row mt-5">
+            <div class="d-lg-flex justify-content-between">
+              <div class="col-8">
+                <span id="footer-text">Weather App</span>
+              </div>
+              <div class="col-4 copyright">
+                <ul class="gap-3 list-unstyled footer-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Cities</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+          </footer>
+
+    </section>
+    <script src="request.js" type="text/javascript"></script>    
+    <script src="app.js" type="text/javascript"></script>
+    </section>
+</body>
+</html>
